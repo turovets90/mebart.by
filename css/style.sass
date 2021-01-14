@@ -430,6 +430,12 @@ header
       color: #fff
       .b_content_top
         margin-bottom: 20px
+        &.text-left
+          .title
+            @media (min-width: 992px)
+              font-size: 40px
+              line-height: 47px
+              margin-bottom: 20px
       .title
         font-size: 56px
         line-height: 1.2
@@ -455,6 +461,8 @@ header
         +ai-center
         +j-beetween
         width: 100%
+        &.mb_35
+          margin-bottom: 35px
 
 
 
@@ -1326,3 +1334,84 @@ footer
       padding: 5px
       text-align: center
       display: none
+
+
+
+.page_content
+  .preim_box
+    .section_title
+      @media (min-width: 992px)
+        font-size: 40px
+      span
+        @media (min-width: 992px)
+          font-size: 22px
+    img.position-absolute
+      top: 12%
+    .preim_list
+      > div
+        margin-bottom: 40px
+      .preim_item
+        picture
+          +flex
+          +ai-center
+          +j-center
+          height: 45px
+        .preim_title
+          line-height: 20px
+          min-height: 40px
+
+
+
+.portfolio_list
+  .portfolio_item
+    background-size: cover
+    background-position: center
+    margin-bottom: 35px
+    height: 545px
+    @media (max-width: 1200px)
+      height: 500px
+    @media (max-width: 991px)
+      height: 450px
+    @media (max-width: 767px)
+      height: 400px
+    @media (max-width: 575px)
+      height: 350px
+    &:hover
+      .container
+        .portfolio_item_info
+          .btn_default
+            opacity: 1
+
+    .container
+      height: 100%
+      +flex
+      +ai-end
+      .portfolio_item_info
+        +flex
+        +ai-center
+        +j-beetween
+        width: 100%
+        margin-bottom: 38px
+        +wrap
+        @media (max-width: 767px)
+          margin-bottom: 20px
+        .portfolio_item_name
+          min-width: 50%
+          font-family: $bold
+          font-size: 40px
+          color: #fff
+          @media (max-width: 1200px)
+            font-size: 35px
+          @media (max-width: 991px)
+            font-size: 30px
+          @media (max-width: 767px)
+            font-size: 26px
+            width: 100%
+            margin-bottom: 10px
+          @media (max-width: 575px)
+            font-size: 24px
+        .btn_default
+          max-width: 195px
+          @media (min-width: 768px)
+            opacity: 0
+
