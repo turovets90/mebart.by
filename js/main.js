@@ -42,6 +42,8 @@ $(document).ready(function(){
     $('.se_btn').each(function(){
         var toggler=$(this).find('.toggler');
         $(toggler).click(function(){
+            //$('.se_btn').removeClass('.act');
+            //$('.toggler').next().slideUp();
             $(toggler).parent().toggleClass('act');
             $(toggler).next().slideToggle();
         });

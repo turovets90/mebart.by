@@ -454,6 +454,7 @@ header
         +flex
         +ai-center
         +j-beetween
+        width: 100%
 
 
 
@@ -950,50 +951,378 @@ footer
     display: inline-block
   .se_btn
     position: absolute
+    @media (max-width: 1200px)
+      position: relative
+      top: initial !important
+      right: initial !important
+      left: initial !important
+      bottom: initial !important
     &.left
       .desc_box
-        left: 13px
+        @media (min-width: 1201px)
+          left: 13px
     &.right
       .desc_box
-        right: 13px
+        @media (min-width: 1201px)
+          right: 13px
     &.act
       z-index: 7
+      .toggler
+        @media (max-width: 1200px)
+          &:before
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%2382A4AD'/%3e%3cpath d='M17 14.5L12.5 10L8 14.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
 
     .toggler
-      width: 27px
-      height: 27px
-      border: 1px solid #fff
-      +border-radius(50%)
-      position: relative
-      cursor: pointer
       z-index: 3
-      &:before
-        +b_a
-        width: 17px
-        height: 17px
-        background: #fff
+      @media (max-width: 1200px)
+        width: 100%
+        text-align: left
+        padding: 10px 15px
+        color: #323232
+        font-family: $bold
+        font-size: 16px
+        position: relative
+        &:before
+          +b_a
+          width: 25px
+          height: 25px
+          right: 10px
+          top: 0
+          bottom: 0
+          margin: auto
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%2382A4AD'/%3e%3cpath d='M8 11L12.5 15.5L17 11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
+
+      @media (min-width: 1201px)
+        display: inline-block
+        text-indent: -9999px
+        width: 27px
+        height: 27px
+        border: 1px solid #fff
         +border-radius(50%)
-        +m_a
+        position: relative
+        cursor: pointer
+        &:before
+          +b_a
+          width: 17px
+          height: 17px
+          background: #fff
+          +border-radius(50%)
+          +m_a
     .desc_box
       background: rgba(0, 0, 0, 0.5)
       padding: 25px
-      position: absolute
-      top: 13px
-      width: 495px
+
       text-align: left
       display: none
+      @media (min-width: 1201px)
+        position: absolute
+        top: 13px
+        width: 495px
+      @media (max-width: 1200px)
+        position: relative
+        padding: 15px
+
       .title
         font-size: 14px
         color: #fff
         font-family: $bold
         margin-bottom: 6px
+        @media (max-width: 1200px)
+          display: none
       .excerpt
         font-size: 12px
         line-height: 14px
         margin-bottom: 20px
+        @media (max-width: 1200px)
+          color: #fff
       .btn_default
         max-width: 195px
 
 
 
+.page_banner
+  height: 545px
+  background-position: center
+  background-size: cover
+  @media (max-width: 1200px)
+    height: 500px
+  @media (max-width: 991px)
+    height: 450px
+  @media (max-width: 767px)
+    height: 400px
+  @media (max-width: 575px)
+    height: 300px
+  > .container
+    +flex
+    +ai-end
+    .b_content
+      width: 100%
+    .b_content_top
+      margin-bottom: 15px
+      .btn_default
+        height: 35px
+      .title
+        color: #fff
+        font-size: 40px
+        font-family: $bold
+        line-height: 47px
+        margin-bottom: 18px
+        @media (max-width: 1200px)
+          font-size: 35px
+          line-height: 1.2
+        @media (max-width: 991px)
+          font-size: 30px
+        @media (max-width: 767px)
+          font-size: 26px
+        @media (max-width: 575px)
+          font-size: 24px
+    .b_content_bottom
+      +flex
+      +ai-center
+      +j-end
+      width: 100%
+      margin-bottom: 35px
 
+
+
+.page_content
+
+
+.breadcrumb
+  background: none
+  padding: 27px 0
+  margin-bottom: 0
+  li
+    position: relative
+    padding: 0 16px
+    &:first-child
+      padding-left: 0
+    &:last-child
+      a
+        font-family: $Circe-Regular
+    + li
+      &:before
+        +b_a
+        left: -2px
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 4px
+        height: 6px
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='4' height='6' viewBox='0 0 4 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L3 3L1 5' stroke='%23484C57' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+    a
+      color: #484C57
+      font-size: 12px
+      font-family: $Circe-Bold
+      text-decoration: none
+
+
+
+.projects_list
+  margin-right: -4px
+  margin-left: -4px
+  > div
+    padding: 0 4px
+    margin-bottom: 20px
+  .project_item
+    picture
+      display: inline-block
+      width: 100%
+      text-align: center
+    &:hover
+      .project_item_info
+        .btn_default
+          opacity: 1
+    .project_item_info
+      +flex
+      +j-beetween
+      +ai-center
+      padding: 10px 0
+      .project_item_name
+        width: 50%
+        min-width: 50%
+        color: #484C57
+        font-family: $bold
+        font-size: 32px
+        @media (max-width: 1200px)
+          font-size: 28px
+        @media (max-width: 991px)
+          font-size: 26px
+        @media (max-width: 767px)
+          font-size: 24px
+      .btn_default
+        @media (min-width: 1201px)
+          opacity: 0
+
+
+
+.steps_list
+  .step_item
+    +flex
+    margin-bottom: 35px
+    @media (max-width: 767px)
+      +wrap
+    &:nth-child(1)
+      @media (min-width: 1201px)
+        margin-bottom: -218px
+      .text_box
+        @media (min-width: 1201px)
+          padding-left: 70px
+    &:nth-child(2)
+      .text_box
+        @media (min-width: 768px)
+          +flex
+          +ai-end
+          +j-end
+          img
+            bottom: 16%
+        @media (min-width: 1201px)
+          padding-right: 70px
+    &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6)
+
+      .text_box
+        @media (min-width: 1025px)
+          img
+            bottom: 0
+    &:nth-child(6)
+      picture
+        @media (max-width: 767px)
+          +flex
+          +wrap
+        img
+          @media (max-width: 767px)
+            width: 48%
+          &:first-child
+            @media (min-width: 1025px)
+              margin-right: 20px
+            @media (max-width: 1024px)
+              margin-bottom: 20px
+            @media (max-width: 767px)
+
+              margin-bottom: 0
+              margin-right: 5px
+
+    &:nth-child(odd)
+      .text_box
+        @media (min-width: 768px)
+          img
+            left: 0
+      picture
+        @media (min-width: 768px)
+          margin-right: 20px
+
+    &:nth-child(even)
+      .text_box
+        @media (min-width: 768px)
+          order: 1
+          margin-right: 20px
+          text-align: right
+          img
+            right: 0
+      picture
+        @media (min-width: 768px)
+          order: 2
+    picture
+      @media (min-width: 1025px)
+        +flex
+      @media (max-width: 1024px)
+        min-width: 50%
+      @media (max-width: 767px)
+        width: 100%
+        margin-bottom: 20px
+
+      img
+        width: auto
+        @media (min-width: 1025px)
+          max-width: initial
+
+    .text_box
+      padding-top: 48px
+      padding-bottom: 48px
+      position: relative
+      @media (max-width: 767px)
+        padding: 15px
+      img
+        position: absolute
+        @media (max-width: 767px)
+          max-width: 50px
+          max-height: 50px
+          right: 0
+          top: 0
+
+      .step_title
+        position: relative
+        color: #484C57
+        font-size: 32px
+        font-family: $bold
+        margin-bottom: 15px
+        @media (max-width: 1200px)
+          font-size: 30px
+        @media (max-width: 991px)
+          font-size: 28px
+        @media (max-width: 575px)
+          font-size: 24px
+
+      .step_desc
+        position: relative
+        color: #484C57
+.steps
+  padding-top: 75px
+  padding-bottom: 60px
+  @media (max-width: 1200px)
+    padding-top: 50px
+    padding-bottom: 45px
+  @media (max-width: 991px)
+    padding-top: 40px
+    padding-bottom: 30px
+
+
+.map_image
+  background: #F6F6F6
+  position: relative
+  margin-bottom: 100px
+  @media (max-width: 1200px)
+    margin-bottom: 70px
+  @media (max-width: 991px)
+    margin-bottom: 50px
+  @media (max-width: 767px)
+    margin-bottom: 30px
+  .section_title2
+    margin-bottom: 0
+    padding-top: 30px
+    @media (min-width: 1201px)
+      top: 13%
+    @media (min-width: 768px)
+      position: absolute
+      right: 0
+      left: 0
+      top: 2%
+      margin: auto
+
+
+  .country_label
+    position: absolute
+    width: 23px
+    height: 34px
+    background: url(../img/metka.svg)
+    cursor: pointer
+    &:hover
+      background: url(../img/metka_hover.svg)
+      .country
+        display: block
+    .country
+      position: absolute
+      top: calc(100% + 12px)
+      left: 0
+      color: #fff
+      background: #82A4AD
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15)
+      font-size: 18px
+      font-family: $bold
+      height: 33px
+      min-width: 155px
+      padding: 5px
+      text-align: center
+      display: none
