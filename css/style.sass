@@ -1415,3 +1415,49 @@ footer
           @media (min-width: 768px)
             opacity: 0
 
+
+.faq_box
+  padding-bottom: 100px
+  @media (max-width: 1200px)
+    padding-bottom: 70px
+  @media (max-width: 991px)
+    padding-bottom: 50px
+  @media (max-width: 767px)
+    padding-bottom: 30px
+.faq_list
+  max-width: 826px
+  margin: auto auto 100px
+  @media (max-width: 1200px)
+    margin-bottom: 70px
+  @media (max-width: 991px)
+    margin-bottom: 50px
+  @media (max-width: 767px)
+    margin-bottom: 30px
+  .faq_list_item
+    margin-bottom: 10px
+    background: #EEEEEE
+    padding: 15px 30px
+    &.act
+      .faq_list_item_head
+        &:before
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%2382A4AD'/%3e%3cpath d='M17 14.5L12.5 10L8 14.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e")
+
+    .faq_list_item_head
+      font-size: 16px
+      font-family: $bold
+      color: #252525
+      position: relative
+      cursor: pointer
+      &:before
+        +b_a
+        right: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 25px
+        height: 25px
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%2382A4AD'/%3e%3cpath d='M8 11L12.5 15.5L17 11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+    .faq_list_item_body
+      display: none
+      font-size: 14px
+      padding-top: 10px

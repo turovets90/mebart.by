@@ -49,6 +49,14 @@ $(document).ready(function(){
         });
     });
 
+    $(' .faq_list_item').each(function(){
+        var faq_toggler=$(this).find('.faq_list_item_head');
+        $(faq_toggler).click(function(){
+            $(faq_toggler).parent().toggleClass('act');
+            $(faq_toggler).next().slideToggle();
+        });
+    });
+
 
 
     /*
