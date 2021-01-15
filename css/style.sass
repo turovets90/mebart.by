@@ -204,7 +204,7 @@ $bold: 'RobotoCondensed-Bold'
   font-style: normal
 
 $light: 'RobotoCondensed-Light'
-
+$black: #484C57
 
 a, button
   +transition($transition_default)
@@ -646,6 +646,14 @@ section
   &.white
     border: 2px solid #fff
     color: #fff
+  &.grey
+    border: 2px solid #B5B5B5
+    color: #B5B5B5
+  &.green
+    border: 2px solid #82A4AD
+    background: #82A4AD
+    color: #fff
+    font-size: 16px
 
 .main_projects_row
   +flex
@@ -1461,3 +1469,160 @@ footer
       display: none
       font-size: 14px
       padding-top: 10px
+
+
+
+
+.services_list
+  margin-right: -4px
+  margin-left: -4px
+  margin-bottom: 70px
+  @media (max-width: 1200px)
+    margin-bottom: 50px
+  @media (max-width: 991px)
+    margin-bottom: 30px
+  @media (max-width: 767px)
+    margin-bottom: 20px
+  > div
+    padding: 0 4px
+  .services_item
+    margin-bottom: 30px
+    .img_thumbnail
+      display: block
+      width: 100%
+      height: 290px
+      background-size: cover
+      background-position: center
+      margin-bottom: 15px
+    .services_item_info
+      .services_item_name
+        display: inline-block
+        width: 100%
+        color: #484C57
+        font-size: 16px
+        line-height: 25px
+        font-family: $bold
+        text-decoration: none
+        margin-bottom: 8px
+      .excerpt
+        font-size: 14px
+        line-height: 16px
+        margin-bottom: 15px
+
+
+.calculate_cost
+  background: #F6F6F6
+  padding: 90px 105px 30px
+  margin-bottom: 100px
+  @media (max-width: 1200px)
+    padding: 70px 30px 30px
+    margin-bottom: 70px
+  @media (max-width: 991px)
+    padding: 50px 50px 30px
+    margin-bottom: 50px
+  @media (max-width: 767px)
+    padding: 30px
+    margin-bottom: 30px
+  @media (max-width: 575px)
+    padding: 30px 15px
+  .calculate-form
+    +flex
+    +wrap
+    +j-beetween
+    .btn_default
+      max-width: 100%
+      height: 45px
+    .col_left
+      width: 65%
+      position: relative
+      padding-bottom: 19%
+      @media (max-width: 1200px)
+        padding-bottom: 24%
+      @media (max-width: 991px)
+        padding-bottom: 0
+        width: 100%
+        +flex
+        +wrap
+        +j-beetween
+      img
+        @media (min-width: 992px)
+          position: absolute
+          right: 0
+          bottom: 0
+      .field
+        max-width: 195px
+        span
+          color: #484C57
+          font-size: 14px
+          font-family: $bold
+          display: inline-block
+          margin-left: 10px
+
+
+
+    .col_right
+      width: 35%
+      max-width: 330px
+      padding-top: 35px
+      @media (max-width: 991px)
+        width: 100%
+        max-width: 100%
+    .section_title2
+      text-align: left
+
+
+.field
+  margin-bottom: 15px
+  label
+    color: #484C57
+    font-size: 14px
+    font-family: $bold
+  .form-control
+    height: 45px
+    background: #fff
+    +border-radius(1px)
+    border: 2px solid #E2E2E2
+    &::-webkit-input-placeholder
+      color: #C4C4C4
+      font-size: 14px
+      text-transform: capitalize
+    &::-moz-placeholder
+      color: #C4C4C4
+      font-size: 14px
+      text-transform: capitalize
+    &::-ms-input-placeholder
+      color: #C4C4C4
+      font-size: 14px
+      text-transform: capitalize
+    &:-moz-placeholder
+      color: #C4C4C4
+      font-size: 14px
+      text-transform: capitalize
+    &:-ms-input-placeholder
+      color: #C4C4C4
+      font-size: 14px
+      text-transform: capitalize
+
+
+.feedback_form
+  .f_title
+    color: $black
+    font-size: 28px
+    font-family: $bold
+    text-align: center
+    margin-bottom: 20px
+    @media (max-width: 1200px)
+      font-size: 26px
+    @media (max-width: 991px)
+      font-size: 24px
+    @media (max-width: 767px)
+      font-size: 22px
+    @media (max-width: 575px)
+      font-size: 20px
+  .f_subtitle
+    color: $black
+    font-size: 14px
+    line-height: 16px
+    text-align: center
+    margin-bottom: 16px
+
