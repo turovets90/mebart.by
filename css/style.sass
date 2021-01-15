@@ -485,6 +485,10 @@ header
         font-size: 25px
       @media (max-width: 575px)
         font-size: 20px
+      &.small
+        font-size: 18px
+        @media (max-width: 1200px)
+          font-size: 16px
 
 .btn_feedback
   width: 57px
@@ -1103,13 +1107,17 @@ footer
 
 
 
-.page_content
 
 
+.breadcrumb_box
+  border-top: 1px solid #E2E2E2
+  border-bottom: 1px solid #E2E2E2
 .breadcrumb
   background: none
   padding: 27px 0
   margin-bottom: 0
+
+
   li
     position: relative
     padding: 0 16px
@@ -1143,10 +1151,80 @@ footer
     padding: 0 4px
     margin-bottom: 20px
   .project_item
+    &.finished_project
+
+      .project_item_info
+        +wrap
+        .btn_default
+          opacity: 1
+          max-width: 193px
+        .name_location
+          width: 100%
+          +flex
+          +ai-center
+          padding-top: 10px
+          margin-bottom: 20px
+          @media (max-width: 575px)
+            padding-top: 0
+            margin-bottom: 10px
+          .project_item_name
+            font-family: $regular
+            width: auto
+            min-width: auto
+            padding-right: 15px
+            margin-right: 15px
+            position: relative
+            @media (min-width: 1201px)
+              font-size: 36px
+
+            &:before
+              +b_a
+              right: 0
+              top: 0
+              bottom: 0
+              margin: auto
+              width: 1px
+              height: 27px
+              background: #E2E2E2
+          .project_item_location
+            display: inline-block
+            position: relative
+            padding-left: 22px
+            font-size: 14px
+            text-decoration: none
+            color: $color_text
+            &:before
+              +b_a
+              left: 0
+              top: 0
+              bottom: 0
+              margin: auto
+              width: 10px
+              height: 14px
+              background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='14' viewBox='0 0 10 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 0C2.23571 0 0 2.191 0 4.9C0 8.575 5 14 5 14C5 14 10 8.575 10 4.9C10 2.191 7.76429 0 5 0ZM5 6.65C4.01429 6.65 3.21429 5.866 3.21429 4.9C3.21429 3.934 4.01429 3.15 5 3.15C5.98571 3.15 6.78571 3.934 6.78571 4.9C6.78571 5.866 5.98571 6.65 5 6.65Z' fill='%237E7166'/%3e%3cpath d='M5 0C2.23571 0 0 2.191 0 4.9C0 8.575 5 14 5 14C5 14 10 8.575 10 4.9C10 2.191 7.76429 0 5 0ZM5 6.65C4.01429 6.65 3.21429 5.866 3.21429 4.9C3.21429 3.934 4.01429 3.15 5 3.15C5.98571 3.15 6.78571 3.934 6.78571 4.9C6.78571 5.866 5.98571 6.65 5 6.65Z' fill='%23888888'/%3e%3c/svg%3e ")
+
     picture
-      display: inline-block
+      +flex
       width: 100%
       text-align: center
+      position: relative
+      &.sold_out
+        &:before
+          +b_a
+          width: 100%
+          height: 100%
+          top: 0
+          left: 0
+          background: rgba(0, 0, 0, 0.35)
+        span
+          position: absolute
+          +m_a
+          color: #fff
+          font-size: 42px
+          font-family: $bold
+          height: fit-content
+          z-index: 2
+
     &:hover
       .project_item_info
         .btn_default
@@ -1494,6 +1572,8 @@ footer
       background-size: cover
       background-position: center
       margin-bottom: 15px
+      @media (max-width: 575px)
+        height: 230px
     .services_item_info
       .services_item_name
         display: inline-block
@@ -1625,4 +1705,228 @@ footer
     line-height: 16px
     text-align: center
     margin-bottom: 16px
+
+
+
+.serv_item_content
+  .steps_list
+    .step_item
+      .text_box
+        img
+          top: 0
+          bottom: initial
+      &:nth-child(even)
+        .text_box
+          @media (min-width: 1201px)
+            padding-right: 50px
+      &:nth-child(odd)
+        .text_box
+          @media (min-width: 1201px)
+            padding-left: 50px
+      &:nth-child(1)
+        margin-bottom: 35px
+      &:nth-child(2)
+        .text_box
+          +ai-center
+
+.page_desc
+  text-align: center
+  max-width: 1040px
+  margin: auto auto 100px
+  @media (max-width: 1200px)
+    margin-bottom: 70px
+  @media (max-width: 991px)
+    margin-bottom: 50px
+  @media (max-width: 767px)
+    margin-bottom: 30px
+
+
+.finished_project_box
+  margin-bottom: 70px
+  @media (max-width: 1200px)
+    margin-bottom: 50px
+  @media (max-width: 991px)
+    margin-bottom: 30px
+  @media (max-width: 767px)
+    margin-bottom: 20px
+
+
+strong, b
+  font-family: $bold
+
+.finished_house_info
+  max-width: 400px
+  .info_box
+    margin-bottom: 18px
+    @media (max-width: 767px)
+      margin-bottom: 10px
+  .d-flex
+    +flex
+    +ai-center
+    margin-bottom: 15px
+    @media (max-width: 767px)
+      margin-bottom: 5px
+    .count
+      color: #82A4AD
+      font-size: 66px
+      font-family: $bold
+      line-height: 1.2
+      margin-right: 12px
+    .text
+      font-size: 18px
+      span
+        display: block
+      strong
+        color: #82A4AD
+
+  .cost
+    color: #82A4AD
+    font-size: 32px
+    font-family: $bold
+    +flex
+    +ai-center
+    +j-center
+    width: 100%
+    height: 55px
+    border: 2px solid #B5B5B5
+    margin-bottom: 15px
+  .btn_default
+    height: 55px
+    font-size: 16px
+    max-width: 100%
+.finished_house
+  margin-bottom: 100px
+  @media (max-width: 1200px)
+    margin-bottom: 70px
+  @media (max-width: 991px)
+    margin-bottom: 50px
+  @media (max-width: 767px)
+    margin-bottom: 30px
+
+
+.mb
+  margin-bottom: 100px
+  @media (max-width: 1200px)
+    margin-bottom: 70px
+  @media (max-width: 991px)
+    margin-bottom: 50px
+  @media (max-width: 767px)
+    margin-bottom: 30px
+
+.box_grey
+  background: #F6F6F6
+  +flex
+  +ai-center
+  +j-center
+  min-height: 415px
+  text-align: center
+  padding: 30px 0
+
+  .sub_title
+    margin-bottom: 35px
+  .btn_default
+    margin: auto
+    height: 45px
+    max-width: 330px
+  .feedback_form
+    max-width: 1065px
+    margin: auto
+    .field
+      margin-bottom: 20px
+    .btn_default
+      max-width: 100%
+      font-size: 16px
+      text-transform: uppercase
+
+
+
+.complex_objects_preim
+  +flex
+  +ai-center
+  +wrap
+  margin-bottom: 80px
+  @media (max-width: 1200px)
+    margin-bottom: 60px
+  @media (max-width: 991px)
+    margin-bottom: 40px
+  @media (max-width: 767px)
+    margin-bottom: 20px
+  .item
+    width: 25%
+    position: relative
+    padding: 0 30px
+    text-align: center
+    margin-bottom: 30px
+    @media (max-width: 1200px)
+      width: 33.33%
+    @media (max-width: 767px)
+      width: 50%
+    @media (max-width: 575px)
+      width: 100%
+    + .item
+      border-left: 2px solid #DDE7E9
+
+    .count
+      color: #82A4AD
+      font-size: 56px
+      line-height: 1.2
+      font-family: $bold
+      margin-bottom: 5px
+
+.building
+  max-width: 720px
+  margin-left: auto
+  margin-right: auto
+
+
+.page_content, .page_desc
+  ul
+    li
+      position: relative
+      padding-left: 27px
+      margin-bottom: 18px
+      &:before
+        +b_a
+        left: 0
+        top: 7px
+        background: #82A4AD
+        width: 10px
+        height: 10px
+        +border-radius(50%)
+
+
+.finished_objects_list
+  margin-right: -4px
+  margin-left: -4px
+  > div
+    padding-left: 4px
+    padding-right: 4px
+    &:nth-child(even)
+      .finished_objects_item
+        +j-end
+        text-align: right
+        .btn_default
+          float: right
+  .finished_objects_item
+    height: 545px
+    background-position: center
+    background-size: cover
+    padding: 30px
+    +flex
+    +ai-end
+    position: relative
+    margin-bottom: 8px
+    &:before
+      +b_a
+      width: 100%
+      height: 100%
+      background: linear-gradient(227.6deg, rgba(17, 16, 31, 0.38) 13.34%, rgba(14, 17, 27, 0.18) 30.85%, rgba(32, 32, 69, 0.18) 43.69%, rgba(63, 73, 88, 0.09) 76.51%)
+      left: 0
+      top: 0
+    .finished_objects_item_title
+      color: #fff
+      font-size: 28px
+      margin-bottom: 20px
+    .btn_default
+      max-width: 195px
 
