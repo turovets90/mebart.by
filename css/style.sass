@@ -263,14 +263,39 @@ body
 
 
 header
-
+  background: #fff
   padding: 18px 0
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 999
+  +transition($transition_default)
+  .logo_white
+    display: none
+  .logo_black
+    display: block
+  &.fixed
+    .main_menu
+      ul.nav
+        li
+          a
+            color: #484C57
+    .header_contacts
+      a
+        color:  #484C57
   &.header_white
     position: fixed
     top: 0
     left: 0
     width: 100%
     z-index: 999
+    background: none
+    .logo_white
+      display: block
+    .logo_black
+      display: none
+
     .mm_btn
       .hamburger
         span
@@ -284,7 +309,25 @@ header
     .header_contacts
       a
         color: #fff
+    &.fixed
+      background: #fff
+      .logo_white
+        display: none
+      .logo_black
+        display: block
+      .mm_btn
+        .hamburger
+          span
+            background: #484C57
 
+      .main_menu
+        ul.nav
+          li
+            a
+              color: #484C57
+      .header_contacts
+        a
+          color: #484C57
 
 
 .header_row
@@ -2326,5 +2369,10 @@ strong, b
     background: #F6F6F6
     +border-radius(0)
     +box-shadow( 3px 4px 35px rgba(0, 0, 0, 0.15))
+
+
+
+.modal, .modal-open
+  padding-right: 0 !important
 
 
