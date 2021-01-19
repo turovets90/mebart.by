@@ -72,6 +72,15 @@ $(document).ready(function(){
     });
     $(window).resize();
 
+
+    $(".scroll_down").click(function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+        top = $(id).offset().top -60;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+
+
 });
 
 
