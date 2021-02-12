@@ -589,7 +589,7 @@ header
   position: relative
   font-family: $bold
   text-align: center
-  margin-bottom: 35px
+  margin-bottom: 20px
   @media (max-width: 1200px)
     font-size: 35px
   @media (max-width: 991px)
@@ -751,19 +751,20 @@ section
     .img_box
       background-size: cover
       background-position: center
-      height: 548px
+      //height: 548px
+      height: 350px
       +flex
       +ai-end
       padding: 30px
       @media (max-width: 1200px)
-        height: 500px
+        //height: 500px
       @media (max-width: 991px)
-        height: 450px
+        //height: 450px
       @media (max-width: 767px)
-        height: 400px
+        //height: 400px
         padding: 15px
       @media (max-width: 575px)
-        height: 350px
+        //height: 350px
 
       .btn_default
         max-width: 195px
@@ -2472,4 +2473,40 @@ strong, b
 .modal, .modal-open
   padding-right: 0 !important
 
+
+.slick-slider
+  .slick-arrow
+    width: 40px
+    height: 40px
+    background: $green
+    +border-radius(50%)
+    z-index: 2
+    &:hover
+      background: $black
+    &:before, &:after
+      +b_a
+      width: 15px
+      height: 2px
+      background: #fff
+
+  .slick-prev
+    left: 4px
+    &:before
+      +transform(rotate(-45deg))
+      top: 14px
+      left: 10px
+    &:after
+      +transform(rotate(45deg))
+      bottom: 14px
+      left: 10px
+  .slick-next
+    right: 4px
+    &:before
+      +transform(rotate(45deg))
+      top: 14px
+      right: 10px
+    &:after
+      +transform(rotate(-45deg))
+      bottom: 14px
+      right: 10px
 

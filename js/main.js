@@ -85,6 +85,44 @@ $(document).ready(function(){
     });
 
 
+    $('.project_slider').each(function(){
+        var item=$(this).find('.main_projects_row_item');
+        if(item.length > 2){
+            $(this).slick({
+                autoplay: false,
+                dots: false,
+                arrows: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        }else if($(window).innerWidth() < 991 && this.length > 1){
+            $(this).slick({
+                autoplay: false,
+                dots: false,
+                arrows: true,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        }
+    });
+
+    $('.standard_equipment_slider').slick({
+        autoplay: false,
+        dots: false,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+
+
 });
 
 
