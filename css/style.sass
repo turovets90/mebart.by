@@ -700,42 +700,41 @@ section
   +flex
   +ai-center
   +j-center
-  border: 2px solid #3A404E
+  color: rgb(59,56,63)
+  border: 1px solid rgb(206, 204, 204)
   width: 100%
-  max-width: 285px
-  height: 40px
-  color: #484C57
-  font-size: 16px
+  max-width: 250px
+  height: 43px
+  font-size: 13px
   text-decoration: none
   font-family: $bold
   @media (max-width: 575px)
     max-width: 100% !important
   &:hover, &:focus
-    background: #82A4AD
-    border: 2px solid #82A4AD
-    color: #fff
+    color: rgb(59,56,63)
+    background-color: rgb(248,244,243)
   &.white
-    border: 2px solid #fff
+    border: 1px solid #fff
     color: #fff
     &:hover, &:focus
       background: #82A4AD
-      border: 2px solid #82A4AD
+      border: 1px solid #82A4AD
       color: #fff
   &.grey
-    border: 2px solid #B5B5B5
+    border: 1px solid #B5B5B5
     color: #B5B5B5
     &:hover, &:focus
       background: #82A4AD
-      border: 2px solid #82A4AD
+      border: 1px solid #82A4AD
       color: #fff
   &.green
-    border: 2px solid #82A4AD
+    border: 1px solid #82A4AD
     background: #82A4AD
     color: #fff
     font-size: 16px
     &:hover, &:focus
       background: $color_title
-      border: 2px solid $color_title
+      border: 1px solid $color_title
       color: #fff
 
 .main_projects_row
@@ -1008,17 +1007,17 @@ footer
         margin-bottom: 30px
     .col_right
       @media (min-width: 1201px)
-        +flex
-        +ai-center
-        +j-beetween
-        +col
+
       .f_title
         text-align: center
         font-size: 16px
         line-height: 19px
+        margin-bottom: 20px
         @media (max-width: 1200px)
           text-align: left
           margin-bottom: 30px
+      .btn_default
+        margin: auto
 
     .social_box
       @media (max-width: 1200px)
@@ -1038,6 +1037,7 @@ footer
     .social_menu
       +flex
       +ai-center
+      margin-bottom: 20px
       @media (min-width: 1201px)
         +j-center
       li
