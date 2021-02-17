@@ -123,6 +123,16 @@ $(document).ready(function(){
     });
 
 
+
+    var typed = new Typed("#typing", {
+        strings: [" производство.", "Возведение “под ключ” за 1,5 месяца"],
+        typeSpeed: 70,
+        backDelay: 1500,
+        startDelay: 2500,
+        loop: true,
+        loopCount: 2,
+    });
+
 });
 
 
