@@ -2515,11 +2515,17 @@ strong, b
     display: inline-block
     &:first-child
       margin-right: 5px
-
+#section_peim
+  padding-bottom: 0
 section.position-relative
+  padding-bottom: 0
   .slick-slider
-    position: initial
-
+    .slick-prev
+      @media (min-width: 1301px)
+        left: -50px
+    .slick-next
+      @media (min-width: 1301px)
+        right: -50px
 
 .standard_equipment_slider
   .slick-slide
