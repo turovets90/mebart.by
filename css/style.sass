@@ -997,7 +997,7 @@ footer
   .copyright
     font-size: 10px
     margin-bottom: 0
-    margin-top: 40px
+    margin-top: 15px
 
   .footer_row
     .col_left
@@ -1147,8 +1147,7 @@ footer
         font-size: 12px
         line-height: 14px
         margin-bottom: 20px
-        @media (max-width: 1200px)
-          color: #fff
+        color: #fff
       .btn_default
         max-width: 195px
 
@@ -2516,4 +2515,15 @@ strong, b
     display: inline-block
     &:first-child
       margin-right: 5px
+
+section.position-relative
+  .slick-slider
+    position: initial
+
+
+.standard_equipment_slider
+  .slick-slide
+    &:not(.slick-current)
+      .se_btn
+        opacity: 0
 
