@@ -92,6 +92,7 @@ $(document).ready(function(){
                 autoplay: false,
                 dots: false,
                 arrows: true,
+                autoplay: true,
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 responsive: [
@@ -107,6 +108,7 @@ $(document).ready(function(){
             $(this).slick({
                 autoplay: false,
                 dots: false,
+                autoplay: true,
                 arrows: true,
                 slidesToShow: 1,
                 slidesToScroll: 1
@@ -115,7 +117,7 @@ $(document).ready(function(){
     });
 
     $('.standard_equipment_slider').slick({
-        autoplay: false,
+        autoplay: true,
         dots: false,
         arrows: true,
         slidesToShow: 1,

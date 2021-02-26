@@ -601,13 +601,13 @@ header
     text-align: center
 .section_title
   color: $color_title
-  font-size: 50px
+  font-size: 45px
   line-height: 1.2
   text-transform: uppercase
   position: relative
   font-family: $bold
   @media (max-width: 1200px)
-    font-size: 45px
+    font-size: 40px
   @media (max-width: 991px)
     font-size: 35px
   @media (max-width: 767px)
@@ -684,6 +684,8 @@ section
     .preim_desc
       font-size: 12px
       line-height: 14px
+      @media (max-width: 575px)
+        font-size: 10px
 
 .preim_box_desc
   max-width: 830px
@@ -709,9 +711,9 @@ section
   text-decoration: none
   font-family: $bold
   @media (max-width: 575px)
-    max-width: 100% !important
+    //max-width: 100% !important
   &:hover, &:focus
-    color: rgb(59,56,63)
+    //color: rgb(59,56,63)
     background: #82A4AD
     border: 1px solid #82A4AD
     color: #fff
@@ -2477,17 +2479,18 @@ strong, b
 
 .slick-slider
   .slick-arrow
-    width: 40px
-    height: 40px
-    background: $green
+    width: 60px
+    height: 60px
+    //background: $green
     +border-radius(50%)
     z-index: 2
     &:hover
-      background: $black
+      //background: $black
     &:before, &:after
       +b_a
-      width: 15px
+      width: 42px
       height: 2px
+      opacity: 1
       background: #fff
 
   .slick-prev
@@ -2524,10 +2527,10 @@ section.position-relative
   .slick-slider
     .slick-prev
       @media (min-width: 1301px)
-        left: -50px
+        //left: -50px
     .slick-next
       @media (min-width: 1301px)
-        right: -50px
+       //right: -50px
 
 .standard_equipment_slider
   .slick-slide
@@ -2535,3 +2538,19 @@ section.position-relative
       .se_btn
         opacity: 0
 
+.typed-cursor
+  color: yellow
+  font-weight: bold
+
+section
+  img
+    &.position-absolute
+      @media (max-width: 575px)
+        max-width: 70%
+
+
+
+.standard_equipment_slider
+  @media (max-width: 1200px)
+    .slick-arrow
+      top: 120px
