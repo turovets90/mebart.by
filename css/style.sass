@@ -373,6 +373,8 @@ header
           li
             a
               color: #484C57
+              @media (max-width: 1024px)
+                color: #fff
       .header_contacts
         a
           color: #484C57
@@ -667,6 +669,7 @@ header
   max-width: 1040px
   margin: auto
   img.position-absolute
+    max-width: 60%
     &.center
       left: 0
       right: 0
@@ -705,7 +708,7 @@ header
 section
   padding: 50px 0
   @media (max-width: 1200px)
-    padding: 30px 0
+    //padding: 30px 0
 
 
 
@@ -1110,14 +1113,27 @@ footer
     position: relative
     margin: auto
     display: inline-block
+
+    @media (max-width: 767px)
+      width: 100%
+    .img_mobile
+      height: 600px
+      width: 100%
+      background-size: cover
+      background-position: center
+      @media (min-width: 768px)
+        display: none
+    img
+      @media (max-width: 767px)
+        display: none
   .se_btn
     position: absolute
-    @media (max-width: 1200px)
-      position: relative
-      top: initial !important
-      right: initial !important
-      left: initial !important
-      bottom: initial !important
+    //@media (max-width: 1200px)
+      //position: relative
+      //top: initial !important
+      //right: initial !important
+      //left: initial !important
+      //bottom: initial !important
     &.left
       .desc_box
         @media (min-width: 1201px)
@@ -1132,13 +1148,13 @@ footer
         display: block
       .toggler
         @media (max-width: 1200px)
-          &:before
+          /*&:before
             background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%2382A4AD'/%3e%3cpath d='M17 14.5L12.5 10L8 14.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
 
 
     .toggler
       z-index: 3
-      @media (max-width: 1200px)
+      /*@media (max-width: 1200px)
         width: 100%
         text-align: left
         padding: 10px 15px
@@ -1157,33 +1173,38 @@ footer
           background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%2382A4AD'/%3e%3cpath d='M8 11L12.5 15.5L17 11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
 
 
-      @media (min-width: 1201px)
-        display: inline-block
-        text-indent: -9999px
-        width: 27px
-        height: 27px
-        border: 1px solid #fff
+      //@media (min-width: 1201px)
+      display: inline-block
+      text-indent: -9999px
+      width: 27px
+      height: 27px
+      border: 1px solid #fff
+      +border-radius(50%)
+      position: relative
+      cursor: pointer
+      &:before
+        +b_a
+        width: 17px
+        height: 17px
+        background: #fff
         +border-radius(50%)
-        position: relative
-        cursor: pointer
-        &:before
-          +b_a
-          width: 17px
-          height: 17px
-          background: #fff
-          +border-radius(50%)
-          +m_a
+        +m_a
     .desc_box
       background: rgba(0, 0, 0, 0.5)
       padding: 25px
 
       text-align: left
       display: none
-      @media (min-width: 1201px)
-        position: absolute
-        top: 13px
-        width: 495px
+
+      position: absolute
+      top: 13px
+      width: 495px
       @media (max-width: 1200px)
+        width: 200px
+        padding: 20px 15px
+      @media (max-width: 767px)
+        padding: 20px 10px 15px
+      /*@media (max-width: 1200px)
         position: relative
         padding: 15px
 
@@ -2600,4 +2621,4 @@ section
 .standard_equipment_slider
   @media (max-width: 1200px)
     .slick-arrow
-      top: 120px
+      //top: 120px
