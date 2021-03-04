@@ -306,6 +306,8 @@ body
   @media (max-width: 991px)
     font-size: 14px
     line-height: 1.2
+body, html
+  overflow-x: hidden
 
 
 header
@@ -672,8 +674,9 @@ header
     max-width: 60%
     &.center
       left: 0
-      right: 0
-      margin: auto
+      @media (min-width: 576px)
+        right: 0
+        margin: auto
   > .d-flex
     margin-bottom: 100px
     @media (max-width: 1200px)
@@ -683,10 +686,13 @@ header
     @media (max-width: 767px)
       //margin-bottom: 30px
     @media (min-width: 1201px)
-      padding-right: 80px
+      //padding-right: 80px
   .section_title
     margin-top: 35px
     //max-width: 670px
+    width: 100%
+    max-width: 830px
+    //margin: auto
     @media (max-width: 1200px)
       margin-top: 30px
     span
@@ -722,7 +728,7 @@ section
     text-align: center
     picture
       display: inline-block
-      margin-bottom: 15px
+      height: 52px
 
 
     .preim_title
@@ -1113,6 +1119,7 @@ footer
   position: relative
   text-align: center
   padding-bottom: 0
+  //overflow-x: hidden
   .content
     position: relative
     margin: auto
@@ -1201,16 +1208,26 @@ footer
       display: none
 
       position: absolute
-      top: 13px
+
       width: 495px
+      @media (min-width: 1201px)
+        top: 13px
       @media (max-width: 1200px)
         width: 200px
         padding: 20px 15px
-      @media (max-width: 767px)
+      @media (max-width: 1200px)
         padding: 20px 10px 15px
+
+        //top: initial
+      @media (max-width: 575px)
+        position: fixed
+        right: 0
+        left: 0 !important
+        margin: auto
       /*@media (max-width: 1200px)
         position: relative
         padding: 15px
+
 
       .title
         font-size: 14px
@@ -1678,6 +1695,7 @@ footer
 
   .preim_box
     .section_title
+
       @media (min-width: 992px)
         font-size: 40px
       span
@@ -2603,13 +2621,28 @@ section.position-relative
     .slick-next
       @media (min-width: 1301px)
        //right: -50px
-@media (max-width: 767px)
-  body
-    overflow-x: hidden
+
 .standard_equipment_slider
-  .slick-list
-    @media (max-width: 767px)
-      overflow: initial
+
+  @media (max-width: 1200px)
+    .slick-list
+      z-index: 1
+      overflow: visible!important
+      -webkit-transform: translate3d(0,0,0)
+      -moz-transform: translate3d(0,0,0)
+      -ms-transform: translate3d(0,0,0)
+      -o-transform: translate3d(0,0,0)
+      transform: translate3d(0,0,0)
+
+    .slick-slide
+      opacity: 0
+      +transition($transition_default)
+
+
+      &.slick-active
+        opacity: 1
+    .slick-track
+      position: relative
   .slick-slide
     &:not(.slick-current)
       .se_btn
@@ -2625,8 +2658,7 @@ section
       @media (max-width: 575px)
         max-width: 70%
         left: 0
-        right: 0
-        margin: auto
+
 
 
 
