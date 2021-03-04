@@ -910,7 +910,9 @@ section
       padding-right: 4px
       padding-left: 4px
       margin-bottom: 20px
-
+      @media (max-width: 575px)
+        &:nth-child(4), &:nth-child(5), &:nth-child(6)
+          display: none
 
 .contacts_box
   background-size: cover
@@ -1070,7 +1072,9 @@ footer
           text-align: left
           margin-bottom: 30px
       .btn_default
-        margin: auto
+        @media (min-width: 1201px)
+          margin: auto
+
 
     .social_box
       @media (max-width: 1200px)
@@ -1136,12 +1140,12 @@ footer
       //bottom: initial !important
     &.left
       .desc_box
-        @media (min-width: 1201px)
-          left: 13px
+        //@media (min-width: 1201px)
+        left: 13px
     &.right
       .desc_box
-        @media (min-width: 1201px)
-          right: 13px
+        //@media (min-width: 1201px)
+        right: 13px
     &.act
       z-index: 7
       .desc_box
@@ -2599,8 +2603,13 @@ section.position-relative
     .slick-next
       @media (min-width: 1301px)
        //right: -50px
-
+@media (max-width: 767px)
+  body
+    overflow-x: hidden
 .standard_equipment_slider
+  .slick-list
+    @media (max-width: 767px)
+      overflow: initial
   .slick-slide
     &:not(.slick-current)
       .se_btn
@@ -2615,6 +2624,9 @@ section
     &.position-absolute
       @media (max-width: 575px)
         max-width: 70%
+        left: 0
+        right: 0
+        margin: auto
 
 
 
