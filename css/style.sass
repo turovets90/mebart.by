@@ -500,6 +500,8 @@ header
   padding-left: 25px
   //border-left: 2px solid #fff
   position: relative
+  @media (max-width: 575px)
+    padding-left: 0
   &:before
     +b_a
     width: 2px
@@ -870,6 +872,8 @@ section
           opacity: 1
       .project_content
         opacity: 0
+        @media (max-width: 991px)
+          opacity: 1
       .btn_default
         max-width: 50%
         @media (min-width: 768px)
@@ -2772,6 +2776,12 @@ section
             width: 50%
             padding-right: 15px
             margin-bottom: 0
+            @media (max-width: 575px)
+              padding-left: 0
           .btn_default
             width: 50%
             max-width: 50% !important
+
+
+
+
