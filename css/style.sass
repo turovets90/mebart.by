@@ -843,7 +843,7 @@ section
 .main_projects_row
   +flex
   +wrap
-  margin: 0 -4px 15px
+  margin: 0 -4px 20px
   .main_projects_row_item
     width: 50%
     padding: 0 4px
@@ -2706,24 +2706,24 @@ section.position-relative
 .standard_equipment_slider
 
   @media (max-width: 1200px)
-    .slick-list
-      z-index: 1
-      overflow: visible!important
-      -webkit-transform: translate3d(0,0,0)
-      -moz-transform: translate3d(0,0,0)
-      -ms-transform: translate3d(0,0,0)
-      -o-transform: translate3d(0,0,0)
-      transform: translate3d(0,0,0)
+  .slick-list
+    z-index: 1
+    overflow: visible!important
+    -webkit-transform: translate3d(0,0,0)
+    -moz-transform: translate3d(0,0,0)
+    -ms-transform: translate3d(0,0,0)
+    -o-transform: translate3d(0,0,0)
+    transform: translate3d(0,0,0)
 
-    .slick-slide
-      opacity: 0
-      +transition($transition_default)
+  .slick-slide
+    opacity: 0
+    +transition($transition_default)
 
 
-      &.slick-active
-        opacity: 1
-    .slick-track
-      position: relative
+    &.slick-active
+      opacity: 1
+  .slick-track
+    position: relative
   .slick-slide
     &:not(.slick-current)
       .se_btn
