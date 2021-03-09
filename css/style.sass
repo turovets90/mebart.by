@@ -806,6 +806,10 @@ section
   font-size: 12px
   text-decoration: none
   font-family: $bold
+  @media (max-width: 767px)
+    max-width: 200px
+    height: 30px
+    font-family: $regular
   .icon, img
     margin-right: 5px
   @media (max-width: 575px)
@@ -1037,6 +1041,9 @@ section
     +ai-center
     +j-center
     text-decoration: none
+    @media (max-width: 767px)
+      height: 30px
+      border: 1px solid #fff
     &:hover, &:focus
       background: #fff
       color: #323232
@@ -1046,17 +1053,44 @@ section
 footer
   background: #3E4452
   padding: 50px 0 0
+  @media (max-width: 767px)
+    text-align: center
+    padding: 30px 0
 
   .btn_default
     margin-bottom: 50px
+    @media (max-width: 767px)
+      margin:  0  auto 20px
+      //max-width: 150px
+      //height: 30px
+
   a
     &:hover
       color: $green
+  .mm_btn
+    +flex
+    +col
+    +ai-center
+    margin-bottom: 25px
+    .hamburger
+      width: 30px
+      height: 20px
+      margin-bottom: 2px
+      span
+        background: #fff
+    > span
+      font-size: 12px
+      font-family: $bold
+      color: #fff
+    @media (min-width: 768px)
+      display: none
   .footer_nav
     +flex
     +wrap
     +ai-center
     margin-bottom: 30px
+    @media (max-width: 767px)
+      display: none
     li
       @media (max-width: 767px)
         width: 100%
@@ -1084,13 +1118,22 @@ footer
     font-size: 12px
     line-height: 1.8
     @media (min-width: 1201px)
-      margin-bottom: 130px
+      margin-bottom: 91px
+      padding-top: 3px
+    @media (max-width: 767px)
+      text-align: left
+    @media (max-width: 575px)
+      font-size: 7px
+    + .btn_default
+      @media (max-width: 575px)
+        font-size: 8px
+
   p
     color: #fff
 
   .phones
     @media (max-width: 575px)
-      margin-top: 20px
+      //margin-top: 20px
     li
 
       a
@@ -1099,6 +1142,11 @@ footer
         font-size: 14px
         font-family: $bold
         line-height: 16px
+        @media (max-width: 767px)
+          font-size: 12px
+          font-family: $regular
+        @media (max-width: 575px)
+          font-size: 10px
         &:hover
           color: $green
 
@@ -1109,6 +1157,12 @@ footer
     position: relative
     padding-left: 30px
     font-family: $bold
+    @media (max-width: 767px)
+      font-size: 12px
+      font-family: $regular
+    @media (max-width: 575px)
+      font-size: 10px
+      padding-left: 0
     &:hover
       color: $green
 
@@ -1121,10 +1175,14 @@ footer
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='12' viewBox='0 0 18 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M16.2 0H1.8C0.81 0 0.00899999 0.675 0.00899999 1.5L0 10.5C0 11.325 0.81 12 1.8 12H16.2C17.19 12 18 11.325 18 10.5V1.5C18 0.675 17.19 0 16.2 0ZM16.2 3L9 6.75L1.8 3V1.5L9 5.25L16.2 1.5V3Z' fill='white'/%3e%3c/svg%3e ")
       width: 18px
       height: 12px
+      @media (max-width: 575px)
+        display: none
   .copyright
-    font-size: 10px
+    font-size: 7px
     margin-bottom: 0
-    margin-top: 15px
+    margin-top: 0
+    color: #fff
+    text-align: left
 
   .footer_row
     .col_left
@@ -1136,11 +1194,15 @@ footer
       @media (max-width: 1200px)
         border-right: 0
         margin-bottom: 30px
+        order: 2
     .col_right
       @media (min-width: 1201px)
         -ms-flex: 0 0 30%
         flex: 0 0 30%
         max-width: 30%
+      @media (max-width: 1200px)
+        order: 1
+
 
       .f_title
         text-align: center
@@ -1150,6 +1212,9 @@ footer
         @media (max-width: 1200px)
           text-align: left
           margin-bottom: 30px
+        @media (max-width: 767px)
+          text-align: center
+          margin-bottom: 25px
       .btn_default
         @media (min-width: 1201px)
           margin: auto
@@ -1169,6 +1234,9 @@ footer
 
         @media (min-width: 1201px)
           text-align: center
+        @media (max-width: 767px)
+          text-align: center
+
 
         span
           display: block
@@ -1179,6 +1247,9 @@ footer
       margin-bottom: 55px
       @media (min-width: 1201px)
         +j-center
+      @media (max-width: 767px)
+        +j-center
+        margin-bottom: 25px
       li
         padding: 0 4px
         a
@@ -1195,7 +1266,6 @@ footer
   position: relative
   text-align: center
   padding-bottom: 0
-  //overflow-x: hidden
   .content
     position: relative
     margin: auto
@@ -1204,10 +1274,11 @@ footer
     @media (max-width: 767px)
       width: 100%
     .img_mobile
-      height: 600px
+      height: 580px
       width: 100%
       background-size: cover
-      background-position: center
+      background-position: center bottom
+      pointer-events: none
       @media (min-width: 768px)
         display: none
     img
@@ -1215,60 +1286,37 @@ footer
         display: none
   .se_btn
     position: absolute
-    //@media (max-width: 1200px)
-      //position: relative
-      //top: initial !important
-      //right: initial !important
-      //left: initial !important
-      //bottom: initial !important
+    @media (max-width: 767px)
+      position: initial
+
     &.left
       .desc_box
-        //@media (min-width: 1201px)
+
         left: 13px
     &.right
       .desc_box
-        //@media (min-width: 1201px)
+
         right: 13px
     &.act
       z-index: 7
       .desc_box
         display: block
-      .toggler
-        @media (max-width: 1200px)
-          /*&:before
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%2382A4AD'/%3e%3cpath d='M17 14.5L12.5 10L8 14.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
 
 
     .toggler
       z-index: 3
-      /*@media (max-width: 1200px)
-        width: 100%
-        text-align: left
-        padding: 10px 15px
-        color: #323232
-        font-family: $bold
-        font-size: 16px
-        position: relative
-        &:before
-          +b_a
-          width: 25px
-          height: 25px
-          right: 10px
-          top: 0
-          bottom: 0
-          margin: auto
-          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%2382A4AD'/%3e%3cpath d='M8 11L12.5 15.5L17 11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
-
-
-      //@media (min-width: 1201px)
+      position: relative
       display: inline-block
       text-indent: -9999px
       width: 27px
       height: 27px
       border: 1px solid #fff
       +border-radius(50%)
-      position: relative
       cursor: pointer
+      @media (max-width: 767px)
+        position: absolute
+        width: 24px
+        height: 24px
       &:before
         +b_a
         width: 17px
@@ -1276,15 +1324,15 @@ footer
         background: #fff
         +border-radius(50%)
         +m_a
+        @media (max-width: 767px)
+          width: 10px
+          height: 10px
     .desc_box
       background: rgba(0, 0, 0, 0.5)
       padding: 7px 7px 7px 25px
-
       text-align: left
       display: none
-
       position: absolute
-
       width: 410px
       @media (min-width: 1201px)
         top: 13px
@@ -1294,35 +1342,68 @@ footer
       @media (max-width: 1200px)
         padding: 20px 10px 15px
 
-        //top: initial
-      @media (max-width: 575px)
-        position: fixed
-        right: 0
-        left: 0 !important
-        margin: auto
-      /*@media (max-width: 1200px)
-        position: relative
-        padding: 15px
+      @media (max-width: 767px)
+        padding: 7px
+        width: auto
+        position: absolute
+        bottom: 10px
+        right: 10px !important
+        left: 10px !important
+        top: initial
+        background: rgba(0, 0, 0, 0.2)
+
+      .close
+        position: absolute
+        top: 5px
+        right: 5px
+        width: 20px
+        height: 20px
+        opacity: 1
+        &:before, &:after
+          +b_a
+          width: 10px
+          height: 1px
+          background: #fff
+          +m_a
+
+        &:before
+          +transform(rotate(45deg))
+        &:after
+          +transform(rotate(-45deg))
+
+        @media (min-width: 768px)
+          display: none
+
 
       .d-flex
         margin-bottom: 0
+        @media (max-width: 767px)
+          +j-center
       .title
         font-size: 14px
         color: #fff
         font-family: $bold
         margin-bottom: 6px
-        text-transform: uppercase
-        @media (max-width: 1200px)
-          display: none
+        //text-transform: uppercase
+        @media (max-width: 767px)
+          font-family: $regular
+          font-size: 12px
+
       .excerpt
         font-size: 10px
         line-height: 14px
         margin-bottom: 20px
         color: #fff
         font-family: $light2
-        text-transform: uppercase
+        //text-transform: uppercase
+        @media (max-width: 767px)
+          font-size: 8px
+          line-height: 1.2
       .btn_default
-        max-width: 195px
+        max-width: 150px
+        height: 30px
+        font-size: 12px
+        font-family: $regular
 
 
 
@@ -2705,26 +2786,14 @@ section.position-relative
 
 .standard_equipment_slider
 
-  @media (max-width: 1200px)
-  .slick-list
-    z-index: 1
-    overflow: visible!important
-    -webkit-transform: translate3d(0,0,0)
-    -moz-transform: translate3d(0,0,0)
-    -ms-transform: translate3d(0,0,0)
-    -o-transform: translate3d(0,0,0)
-    transform: translate3d(0,0,0)
-
-  .slick-slide
-    opacity: 0
-    +transition($transition_default)
 
 
-    &.slick-active
-      opacity: 1
+
   .slick-track
     position: relative
   .slick-slide
+    &.slick-current
+      z-index: 3
     &:not(.slick-current)
       .se_btn
         opacity: 0

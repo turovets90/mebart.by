@@ -46,6 +46,9 @@ $(document).ready(function(){
         $('.se_btn .toggler').click(function(){
             $('.se_btn').removeClass('act');
             $(this).parent().toggleClass('act');
+            $('.desc_box .close').click(function () {
+                $(this).parent().parent().removeClass('act');
+            });
             return false;
         });
         $(document).on('click', function(e) {
@@ -131,6 +134,10 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1
     });
+
+
+
+
 
 
 
