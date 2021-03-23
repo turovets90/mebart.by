@@ -298,7 +298,7 @@ ul
 
 
 .container
-  max-width: 1068px
+  max-width: 1280px
 
 $color_text: #484C57
 $color_title: #727270
@@ -708,7 +708,7 @@ header
   padding-top: 0
 .preim_box
   position: relative
-  max-width: 1040px
+  //max-width: 1040px
   margin: auto
   img.position-absolute
     //max-width: 60%
@@ -858,7 +858,7 @@ section
       background-size: cover
       background-position: center
       //height: 548px
-      height: 350px
+      height: 430px
       +flex
       +ai-end
       padding: 7px
@@ -879,7 +879,7 @@ section
         @media (max-width: 991px)
           opacity: 1
       .btn_default
-        max-width: 50%
+        max-width: 260px
         @media (min-width: 768px)
           height: 45px
       .project_name
@@ -962,9 +962,19 @@ section
 
 
 .instafeed
-  max-width: 1040px
+  //max-width: 1040px
   margin: auto
   //padding-bottom: 30px
+  +flex
+  +ai-center
+  +j-beetween
+  .item
+    padding: 0 5px
+    margin-bottom: 20px
+    &:first-child
+      padding-left: 0
+    &:last-child
+      padding-right: 0
   .row
     margin-left: -4px
     margin-right: -4px
@@ -999,10 +1009,10 @@ section
     position: relative
   .section_title2
     color: #fff
-    margin-top: 35px
+    margin-top: 0
   .subtitle
     color: #fff
-    margin-bottom: 30px
+    margin-bottom: 40px
 
   .title
     font-size: 38px
@@ -1024,13 +1034,17 @@ section
       margin-bottom: 20px
 
 .contacts_nav
-  max-width: 935px
-  margin: auto
+  max-width: 1200px
+  @media (min-width: 1201px)
+    margin: auto
   > div
     margin-bottom: 13px
+    @media (min-width: 1201px)
+      padding-left: 25px
+      padding-right: 25px
   a
     width: 100%
-    height: 45px
+    height: 53px
     border: 2px solid #fff
     +border-radius(2px)
     color: #fff
@@ -1118,7 +1132,7 @@ footer
     font-size: 12px
     line-height: 1.8
     @media (min-width: 1201px)
-      margin-bottom: 91px
+      margin-bottom: 64px
       padding-top: 3px
     @media (max-width: 767px)
       text-align: left
@@ -1186,13 +1200,15 @@ footer
 
   .footer_row
     .col_left
-      border-right: 1px solid #fff
+      border-right: 1px solid #525662
       @media (min-width: 1201px)
         -ms-flex: 0 0 70%
         flex: 0 0 70%
         max-width: 70%
       @media (max-width: 1200px)
         border-right: 0
+      .btn_default
+        border: 1px solid #CBCDD2
 
         order: 2
     .col_right
@@ -1208,7 +1224,7 @@ footer
         text-align: center
         font-size: 16px
         line-height: 19px
-        margin-bottom: 42px
+        margin-bottom: 35px
         @media (max-width: 1200px)
           text-align: left
           margin-bottom: 30px
@@ -1216,6 +1232,7 @@ footer
           text-align: center
           margin-bottom: 25px
       .btn_default
+        border: 1px solid #CBCDD2
         @media (min-width: 1201px)
           margin: auto
 
@@ -1244,7 +1261,7 @@ footer
     .social_menu
       +flex
       +ai-center
-      margin-bottom: 55px
+      margin-bottom: 35px
       @media (min-width: 1201px)
         +j-center
       @media (max-width: 767px)
@@ -2731,40 +2748,38 @@ strong, b
 
 .slick-slider
   .slick-arrow
-    width: 60px
-    height: 60px
+    width: 15px
+    height: 24px
     //background: $green
     +border-radius(50%)
     z-index: 2
-    &:hover
-      //background: $black
-    &:before, &:after
+    opacity: 1
+
+    &:before
       +b_a
-      width: 42px
-      height: 2px
+      width: 15px
+      height: 24px
       opacity: 1
-      background: #fff
+      +m_a
+
 
   .slick-prev
-    left: 4px
+    left: 6.5%
+    @media (max-width: 1400px)
+      left: 3%
+    @media (max-width: 1200px)
+      left: 1%
     &:before
-      +transform(rotate(-45deg))
-      top: 14px
-      left: 10px
-    &:after
-      +transform(rotate(45deg))
-      bottom: 14px
-      left: 10px
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='26' viewBox='0 0 15 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 1L2 13L14 25' stroke='white' stroke-width='2'/%3e%3c/svg%3e ")
+
   .slick-next
-    right: 4px
+    right: 6.5%
+    @media (max-width: 1400px)
+      right: 3%
+    @media (max-width: 1200px)
+      right: 1%
     &:before
-      +transform(rotate(45deg))
-      top: 14px
-      right: 10px
-    &:after
-      +transform(rotate(-45deg))
-      bottom: 14px
-      right: 10px
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='26' viewBox='0 0 15 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 25L13 13L1 0.999999' stroke='white' stroke-width='2'/%3e%3c/svg%3e ")
 
 
 .typing_text
@@ -2848,8 +2863,8 @@ section
             @media (max-width: 575px)
               padding-left: 0
           .btn_default
-            width: 50%
-            max-width: 50% !important
+            width: 100%
+            max-width: 260px !important
 
 
 
