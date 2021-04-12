@@ -1296,20 +1296,24 @@ footer
   .content
     position: relative
     margin: auto
-    display: inline-block
+    //display: inline-block
 
     @media (max-width: 767px)
       width: 100%
     .img_mobile
-      height: 580px
+      height: 750px
       width: 100%
       background-size: cover
       background-position: center bottom
       pointer-events: none
-      @media (min-width: 768px)
-        display: none
-    img
+      display: block
+      @media (max-width: 1200px)
+        //display: none
+        height: 600px
       @media (max-width: 767px)
+        height: 580px
+    img
+      @media (min-width: 1201px)
         display: none
   .se_btn
     position: absolute
