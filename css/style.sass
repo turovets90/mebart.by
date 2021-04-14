@@ -504,7 +504,7 @@ header
     padding-left: 0
   &:before
     +b_a
-    width: 2px
+    width: 1px
     height: 28px
     background: #fff
     left: 0
@@ -567,7 +567,7 @@ header
               line-height: 47px
               margin-bottom: 20px
       .title
-        font-size: 54px
+        font-size: 60px
         line-height: 45px
         font-family: $bold
         //
@@ -2870,6 +2870,9 @@ section
           width: 100%
           +flex
           +ai-center
+          +j-beetween
+          @media (min-width: 1201px)
+            padding: 15px
           .project_name
             width: 50%
             padding-right: 15px
@@ -2883,7 +2886,7 @@ section
 
 
 
-.wrapper
+section
   width: 100%
   max-width: 1920px
   margin: auto
