@@ -666,7 +666,7 @@ header
 
 .section_title2
   color: #484C57
-  font-size: 22px
+  font-size: 28px
   //
   position: relative
   font-family: $bold
@@ -971,7 +971,7 @@ section
   +ai-center
   +j-beetween
   .item
-    padding: 0 5px
+    padding: 0 2px
     margin-bottom: 20px
     &:first-child
       padding-left: 0
@@ -1306,14 +1306,14 @@ footer
       background-size: cover
       background-position: center bottom
       pointer-events: none
-      display: block
+      display: none
       @media (max-width: 1200px)
-        //display: none
+        display: block
         height: 600px
       @media (max-width: 767px)
         height: 580px
     img
-      @media (min-width: 1201px)
+      @media (max-width: 1200px)
         display: none
   .se_btn
     position: absolute
