@@ -824,9 +824,9 @@ section
     border: 1px solid #fff
     color: #fff
     &:hover, &:focus
-      background: #82A4AD
-      border: 1px solid #82A4AD
-      color: #fff
+      background: #fff
+      border: 1px solid #fff
+      color: #82A4AD
   &.grey
     border: 1px solid #B5B5B5
     color: #B5B5B5
@@ -878,7 +878,8 @@ section
         +b_a
         width: 100%
         height: 100%
-        background: rgba(44, 66, 84, 0.5)
+        //background: rgba(44, 66, 84, 0.5)
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))
         left: 0
         top: 0
         opacity: 0
@@ -1315,20 +1316,20 @@ footer
     @media (max-width: 767px)
       width: 100%
     .img_mobile
-      height: 750px
+      height: 700px
       width: 100%
       background-size: cover
       background-position: center bottom
       pointer-events: none
-      display: none
+      //display: none
       @media (max-width: 1200px)
         display: block
         height: 600px
       @media (max-width: 767px)
         height: 580px
     img
-      @media (max-width: 1200px)
-        display: none
+      //@media (max-width: 1200px)
+      display: none
   .se_btn
     position: absolute
     @media (max-width: 767px)
