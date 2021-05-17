@@ -1549,6 +1549,7 @@ footer
     background: none
     padding: 27px 0
     margin-bottom: 0
+
     li
       position: relative
       padding: 0 16px
@@ -1870,10 +1871,17 @@ footer
 
 
 .page_content
+  .section_title2
+    @media (min-width: 1201px)
+      margin-top: 50px
   .breadcrumb
     background: none
     padding: 27px 0
     margin-bottom: 0
+    + .section_title2
+      margin-top: 50px
+
+
     li
       position: relative
       padding: 0 16px
@@ -1986,7 +1994,7 @@ footer
 
 .faq_list
   max-width: 826px
-  margin: auto auto 100px
+  margin: auto auto 50px
   @media (max-width: 1200px)
     margin-bottom: 70px
   @media (max-width: 991px)
@@ -2276,9 +2284,9 @@ strong, b
 
 
 .mb
-  margin-bottom: 100px
+  margin-bottom: 50px
   @media (max-width: 1200px)
-    margin-bottom: 50px
+    //margin-bottom: 50px
   @media (max-width: 991px)
     margin-bottom: 30px
 
@@ -2917,6 +2925,14 @@ section
   width: 100%
   max-width: 1920px
   margin: auto
+
+
+
+html
+  &:not(.home)
+    .header_contacts
+      &:before
+        background: #333
 
 
 
