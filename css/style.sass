@@ -546,7 +546,7 @@ header
     height: 100%
     left: 0
     top: 0
-    background: linear-gradient(227.6deg, rgba(17, 16, 31, 0.38) 13.34%, rgba(14, 17, 27, 0.18) 30.85%, rgba(32, 32, 69, 0.18) 43.69%, rgba(110, 126, 151, 0) 76.51%)
+    background: rgba(0, 0, 0, 0.4)
 
   .container
     +flex
@@ -1942,6 +1942,10 @@ footer
     background-position: center
     margin-bottom: 35px
     height: 545px
+    position: relative
+    display: block
+    text-decoration: none
+
     @media (max-width: 1200px)
       height: 500px
     @media (max-width: 991px)
@@ -1950,7 +1954,15 @@ footer
       height: 400px
     @media (max-width: 575px)
       height: 350px
+    &:before
+      +b_a
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      background: rgba(0, 0, 0, 0.2)
     &:hover
+      text-decoration: none
       .container
         .portfolio_item_info
           .btn_default
@@ -1960,6 +1972,7 @@ footer
       height: 100%
       +flex
       +ai-end
+      position: relative
       .portfolio_item_info
         +flex
         +ai-center
@@ -2295,9 +2308,11 @@ strong, b
   +flex
   +ai-center
   +j-center
-  min-height: 415px
+  min-height: 330px
   text-align: center
   padding: 30px 0
+  .section_title2
+    margin-top: 0
 
   .sub_title
     margin-bottom: 35px
@@ -2714,9 +2729,13 @@ strong, b
             bottom: -1px
 
         picture
-          display: block
+          //display: block
           width: 100%
           margin-bottom: 15px
+          min-height: 50px
+          +flex
+          +ai-center
+          +j-center
 
         span
           color: #484C57
@@ -2928,8 +2947,8 @@ section
 
 
 
-html
-  &:not(.home)
+header
+  &:not(.header_white)
     .header_contacts
       &:before
         background: #333
