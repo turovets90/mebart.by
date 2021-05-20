@@ -1456,7 +1456,7 @@ footer
 
 
 .page_banner
-  height: 545px
+  height: 745px
   background-position: center
   background-size: cover
   position: relative
@@ -1490,7 +1490,7 @@ footer
     .b_content_top
       margin-bottom: 15px
       .btn_default
-        height: 35px
+        //height: 35px
       .c_list
         @media (min-width: 1201px)
           margin-bottom: -67px
@@ -1512,7 +1512,7 @@ footer
               font-size: 12px
       .title
         color: #fff
-        font-size: 38px
+        font-size: 43px
         font-family: $bold
         line-height: 47px
         margin-bottom: 18px
@@ -1651,7 +1651,7 @@ footer
           height: 100%
           top: 0
           left: 0
-          background: rgba(0, 0, 0, 0.35)
+          background: rgba(0, 0, 0, 0.5)
         span
           position: absolute
           +m_a
@@ -2017,10 +2017,13 @@ footer
     margin-bottom: 10px
     background: #EEEEEE
     padding: 15px 30px
+    @media (max-width: 768px)
+      padding: 15px
     &.act
       .faq_list_item_head
-        &:before
-          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%2382A4AD'/%3e%3cpath d='M17 14.5L12.5 10L8 14.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e")
+        span
+          &:after
+            opacity: 0
 
     .faq_list_item_head
       font-size: 16px
@@ -2028,15 +2031,26 @@ footer
       color: #252525
       position: relative
       cursor: pointer
-      &:before
-        +b_a
+      padding-right: 35px
+      span
+        width: 30px
+        height: 30px
+        display: inline-block
+        position: absolute
         right: 0
         top: 0
         bottom: 0
         margin: auto
-        width: 25px
-        height: 25px
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%2382A4AD'/%3e%3cpath d='M8 11L12.5 15.5L17 11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+        background: #f6f6f6
+        +border-radius(50%)
+        &:before, &:after
+          +b_a
+          +m_a
+          width: 14px
+          height: 2px
+          background: #afafaf
+        &:after
+          +transform(rotate(-90deg))
     .faq_list_item_body
       display: none
       font-size: 14px
@@ -2058,6 +2072,8 @@ footer
     padding: 0 4px
   .services_item
     margin-bottom: 30px
+    .btn_default
+      margin: auto
     .img_thumbnail
       display: block
       width: 100%
@@ -2312,10 +2328,12 @@ strong, b
   text-align: center
   padding: 30px 0
   .section_title2
-    margin-top: 0
+    margin-top: 20px
+    margin-bottom: 3px
 
   .sub_title
     margin-bottom: 35px
+    line-height: 1.1
   .btn_default
     margin: auto
     height: 45px
@@ -2461,6 +2479,7 @@ strong, b
   .item
     width: 16.66%
     +flex
+    +ai-center
     @media (max-width: 1200px)
       width: 20%
       margin-bottom: 20px
@@ -2472,21 +2491,35 @@ strong, b
       width: 100%
 
     picture
-      min-width: 45px
       margin-right: 10px
+      display: inline-block
+      width: 47px
+      height: 47px
+      img
+        max-height: 47px
+        max-width: 47px
 
 
     .text
+      text-transform: uppercase
+      +flex
+      +col
+      //+ai-center
+      //text-align: center
+      width: calc(100%  - 47px)
       strong
         color: #484C57
-        font-size: 16px
+        font-size: 11px
+        line-height: 11px
         font-family: $bold
-        margin-bottom: 5px
+        margin-bottom: 3px
         display: block
+
       span
-        font-size: 14px
-        line-height: 16px
+        font-size: 9px
+        line-height: 11px
         display: inline-block
+        //max-width: 80%
 
 .p_35
   padding: 35px 0
@@ -2787,8 +2820,10 @@ strong, b
       margin-bottom: 10px
 
   .modal-body
-    padding-top: 50px
+    padding-top: 30px
     padding-bottom: 50px
+    .section_title2
+      margin-bottom: 10px
 
   .close
     position: absolute
@@ -2952,6 +2987,5 @@ header
     .header_contacts
       &:before
         background: #333
-
 
 
