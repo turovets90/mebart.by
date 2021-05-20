@@ -100,7 +100,8 @@ $(document).ready(function(){
 
     $('.project_slider').each(function(){
         var item=$(this).find('.main_projects_row_item');
-        if(item.length > 2){
+        var item2=$(this).find('.finished_objects_item');
+        if(item.length > 2 || item2.length > 2){
             $(this).slick({
                 dots: false,
                 arrows: true,
