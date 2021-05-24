@@ -1676,13 +1676,13 @@ footer
         min-width: 50%
         color: #484C57
         font-family: $bold
-        font-size: 32px
+        font-size: 25px
         @media (max-width: 1200px)
-          font-size: 28px
+          font-size: 23px
         @media (max-width: 991px)
-          font-size: 26px
+          font-size: 22px
         @media (max-width: 767px)
-          font-size: 24px
+          //font-size: 24px
         @media (max-width: 575px)
           font-size: 20px
       .btn_default
@@ -2752,10 +2752,16 @@ strong, b
         +flex
         +col
 
-        &.active
+        &.active, &:hover
           color: #82A4AD
+
           span
             color: #82A4AD
+          picture
+            .img_default
+              display: none
+            .img_hover
+              display: block
           &:before
             +b_a
             width: 100%
@@ -2772,6 +2778,9 @@ strong, b
           +flex
           +ai-end
           +j-center
+          .img_default
+          .img_hover
+            display: none
 
         span
           color: #484C57
