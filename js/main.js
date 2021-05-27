@@ -70,22 +70,6 @@ $(document).ready(function(){
     });
 
 
-    $(window).resize(function(){
-        var header_height = $('header').outerHeight();
-        $('header').next().css({'margin-top': header_height+'px'});
-        $(window).scroll(function(){
-            if ($(this).scrollTop() > header_height) {
-                $('header').addClass('fixed');
-            } else {
-                $('header').removeClass('fixed');
-            }
-        });
-        if($(this).width() < 1200){
-            $('.b_content_top .title br').remove();
-        }
-    });
-    $(window).resize();
-
 
     $(".scroll_down").click(function (event) {
         event.preventDefault();
@@ -138,10 +122,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
     var typed = new Typed("#typing", {
         strings: [ " г. изготавливаемкачественный слоеный брус."],
         typeSpeed: 70,
@@ -154,6 +134,21 @@ $(document).ready(function(){
 
 });
 
+$(window).resize(function(){
+    var header_height = $('header').outerHeight();
+    $('header').next().css({'margin-top': header_height+'px'});
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > header_height) {
+            $('header').addClass('fixed');
+        } else {
+            $('header').removeClass('fixed');
+        }
+    });
+    if($(this).width() < 1200){
+        $('.b_content_top .title br').remove();
+    }
+});
+$(window).resize();
 
 var show = true;
 var countbox = ".complex_objects_preim";
