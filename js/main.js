@@ -150,6 +150,8 @@ $(window).resize(function(){
 });
 $(window).resize();
 
+
+$(document).ready(function () {
 var show = true;
 var countbox = ".complex_objects_preim";
 $(window).on("scroll load resize", function () {
@@ -159,7 +161,7 @@ $(window).on("scroll load resize", function () {
     var w_height = $(window).height(); // Высота окна браузера
     var d_height = $(document).height(); // Высота всего документа
     var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-    if (w_top + 800 >= e_top) {
+    if (w_top+w_height-50 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
         $('.counter').css('opacity', '1');
         $('.counter').spincrement({
             thousandSeparator: "",
@@ -170,6 +172,6 @@ $(window).on("scroll load resize", function () {
     }
 });
 
-
+});
 
 
