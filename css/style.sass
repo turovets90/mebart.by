@@ -563,12 +563,13 @@ header
           margin-bottom: 75px
         &.text-left
           .title
+            font-size: 38px
             @media (min-width: 992px)
               font-size: 38px
               line-height: 47px
               margin-bottom: 20px
             @media (min-width: 1201px)
-              font-size: 80px
+              font-size: 50px
               line-height: 1
       .title
         font-size: 80px
@@ -1461,18 +1462,18 @@ footer
 
 
 .page_banner
-  height: calc(100vh - 85px)
+  height: 800px
   background-position: center
   background-size: cover
   position: relative
   @media (max-width: 1200px)
-    //height: 500px
+    height: 500px
   @media (max-width: 991px)
-    //height: 450px
+    height: 450px
   @media (max-width: 767px)
-    //height: 400px
+    height: 400px
   @media (max-width: 575px)
-    //height: 300px
+    height: 300px
   .contacts_banner
     height: auto
     min-height: 400px
@@ -1522,7 +1523,7 @@ footer
         line-height: 47px
         margin-bottom: 18px
         @media (min-width: 1201px)
-          font-size: 80px
+          font-size: 60px
           line-height: 1
         @media (max-width: 1200px)
           font-size: 35px
@@ -1609,6 +1610,21 @@ footer
       background: rgba(0, 0, 0, 0.5)
       opacity: 0
     &.finished_project
+      &:before
+        display: none
+      &:hover
+        picture
+          &:before
+            opacity: 1
+      picture
+        &:before
+          +b_a
+          width: 100%
+          height: 100%
+          left: 0
+          top: 0
+          background: rgba(0, 0, 0, 0.5)
+          opacity: 0
 
       .project_item_info
         +wrap
@@ -2007,7 +2023,7 @@ footer
           +ai-center
           +j-beetween
           width: 100%
-          margin-bottom: 38px
+          margin-bottom: 20px
           +wrap
           @media (max-width: 767px)
             margin-bottom: 20px
@@ -2309,13 +2325,14 @@ strong, b
       //margin-bottom: 5px
     .count
       color: #82A4AD
-      font-size: 66px
+      font-size: 70px
       font-family: $bold
       line-height: 1.2
-      margin-right: 12px
+      margin-right: 8px
 
     .text
       font-size: 18px
+      line-height: 1
       span
         display: block
       strong
