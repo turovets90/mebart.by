@@ -914,6 +914,60 @@ section
           font-size: 25px
           //margin-bottom: 15px
 
+.img_box
+  background-size: cover
+  background-position: center
+  //height: 548px
+  height: 430px
+  width: 100%
+  +flex
+  +ai-end
+  padding: 7px
+
+  @media (min-width: 1921px)
+    height: 650px
+  @media (max-width: 1200px)
+  //height: 500px
+  @media (max-width: 991px)
+  //height: 450px
+  @media (max-width: 767px)
+    //height: 400px
+    padding: 15px
+  @media (max-width: 575px)
+    height: 350px
+  &:before
+    +b_a
+    width: 100%
+    height: 100%
+    //background: rgba(44, 66, 84, 0.5)
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))
+    left: 0
+    top: 0
+    opacity: 0
+  &:hover
+    &:before
+      opacity: 1
+    .project_content
+      opacity: 1
+  .project_content
+    opacity: 0
+    @media (max-width: 991px)
+      opacity: 1
+  .btn_default
+    max-width: 260px
+    @media (min-width: 768px)
+      height: 45px
+  .project_name
+    color: #fff
+    font-size: 34px
+    font-family: $light
+    line-height: 1.1
+    //margin-bottom: 25px
+    //font-family: $bold
+    @media (max-width: 1200px)
+      font-size: 30px
+    @media (max-width: 767px)
+      font-size: 25px
 
 
 .preim_box
@@ -1682,13 +1736,10 @@ footer
       text-align: center
       position: relative
       &.sold_out
-        &:before
-          +b_a
-          width: 100%
-          height: 100%
-          top: 0
-          left: 0
-          background: rgba(0, 0, 0, 0.5)
+        .img_box
+          &:before
+            opacity: 1
+
         span
           position: absolute
           +m_a
