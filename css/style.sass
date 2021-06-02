@@ -763,6 +763,7 @@ section
 
 .preim_list
   position: relative
+  padding-top: 20px
   //margin-bottom: 20px
   > div
     margin-bottom: 30px
@@ -2010,6 +2011,7 @@ footer
       top: 12%
 
     .preim_list
+
       > div
         margin-bottom: 40px
       .preim_item
@@ -2137,14 +2139,14 @@ footer
         top: 0
         bottom: 0
         margin: auto
-        background: $green
+        background: #cbcaca
         +border-radius(50%)
         &:before, &:after
           +b_a
           +m_a
           width: 14px
           height: 2px
-          background: #fff
+          background: $green
         &:after
           +transform(rotate(-90deg))
     .faq_list_item_body
@@ -2672,14 +2674,15 @@ strong, b
     margin-bottom: 5px
   .count
     color: #82A4AD
-    font-size: 66px
+    font-size: 70px
     font-family: $bold
     line-height: 1.2
-    margin-right: 12px
+    margin-right: 8px
     @media (max-width: 767px)
       font-size: 35px
   .text
     font-size: 18px
+    line-height: 1
     span
       display: block
     strong
@@ -2838,7 +2841,10 @@ strong, b
       //+ai-center
       +j-center
       @media (min-width: 1201px)
-        width: 14.28%
+        width: 13%
+        &:nth-child(1), &:nth-child(3)
+          width: 17.5%
+
 
       &:before
         display: none
