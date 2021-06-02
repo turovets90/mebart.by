@@ -151,48 +151,22 @@ $(window).resize(function(){
 $(window).resize();
 
 
-$(document).ready(function () {
-var show = true;
-var countbox = ".complex_objects_preim";
-var count=$(countbox).find('.counter');
-
-var countbox2 = ".complex_objects_preim2";
-var count2=$(countbox2).find('.counter');
-
-$(window).on("scroll load resize", function () {
-    if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
-    var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
-    var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
-    var e_top2 = $(countbox2).offset().top; // Расстояние от блока со счетчиками до верха всего документа
-    var w_height = $(window).height(); // Высота окна браузера
-    var d_height = $(document).height(); // Высота всего документа
-    var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-    var e_height2 = $(countbox2).outerHeight(); // Полная высота блока со счетчиками
-
-
-    if (w_top === e_top2 || w_height + w_top == d_height || e_height2 + e_top2 < w_height) {
-        $(count2).css('opacity', '1');
-        $(count2).spincrement({
-            thousandSeparator: "",
-            duration: 3500
+$(document).ready(function() {
+    var windowHeight = $(window).height();
+    $(document).on('scroll', function() {
+        $('.complex_objects_preim').each(function() {
+            var count=$(this).find('.counter');
+            var self = $(this),
+                height = self.offset().top + self.height();
+            if ($(document).scrollTop() + windowHeight >= height) {
+                $(count).css('opacity', '1');
+                $(count).spincrement({
+                    thousandSeparator: "",
+                    duration: 3500
+                });
+            }
         });
-
-        show = false;
-    }
-
-    if (w_top+w_height-50 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-        $(count).css('opacity', '1');
-        $(count).spincrement({
-            thousandSeparator: "",
-            duration: 3500
-        });
-
-        show = false;
-    }
-
-});
-
-
+    });
 });
 
 
